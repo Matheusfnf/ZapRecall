@@ -17,13 +17,14 @@ body{
   background-color: #fb6b6b;
   height: 85vh;
   width: 100%;
-  font-family: 'Righteous', cursive;
+  
   
 }
 
 .foot{
   height: 15vh;
   background-color: red;
+  width: 100%;
 }
 
 

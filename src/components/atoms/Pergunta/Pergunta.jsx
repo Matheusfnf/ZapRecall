@@ -4,16 +4,13 @@ import CaixaLembrou from "../../molecules/CaixaLembrou/CaixaLembrou";
 import iconecerto from "../../../images/icone_certo.png";
 import iconequase from "../../../images/icone_erro.png";
 import iconeerro from "../../../images/icone_quase.png";
-import { isDisabled } from "@testing-library/user-event/dist/utils";
+import setaplay from "../../../images/seta_play.png";
 import Contexto from "../Contexto/MyContext";
-
 
 export default function Pergunta(props, style) {
   const [page, setPage] = useState(0);
   const [status, setStatus] = useState("");
-  const {total, setTotal} = useContext(Contexto);
-  
- 
+  const { total, setTotal } = useContext(Contexto);
 
   const button = {
     0: props.titulo,
@@ -23,26 +20,23 @@ export default function Pergunta(props, style) {
   };
 
   const handleClick = () => {
-   
-    
     if (page >= 3) {
-      
       return;
     }
     setPage(page + 1);
-    
   };
 
   const finalButton = () => {
-    setPage(3)
-    setTotal(total + 1)
-  }
+    setPage(3);
+    setTotal(total + 1);
+  };
 
   if (page === 0) {
     return (
       <>
         <Button color={status} onClick={() => handleClick()}>
           {button[page]}
+          <img src={setaplay} />
         </Button>
       </>
     );
@@ -59,7 +53,7 @@ export default function Pergunta(props, style) {
   if (page === 2) {
     return (
       <>
-        <LastButton  status={status}>
+        <LastButton status={status}>
           {button[page]}
           <div>
             <CaixaLembrou
@@ -103,6 +97,5 @@ export default function Pergunta(props, style) {
         </>
       );
     }
-    
   }
 }

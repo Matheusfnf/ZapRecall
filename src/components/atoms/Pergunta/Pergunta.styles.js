@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const Button = styled.button`
   width: 70%;
   height: 50px;
-  font-family: "Recursive";
+  font-family: "Righteous";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 20px;
   line-height: 14px;
   display: flex;
@@ -20,14 +20,17 @@ export const Button = styled.button`
   margin-top: 60px;
   text-decoration: ${(props) => {
     if (props.grifado === "ok") return "line-through";
-  }};
-  
+  }
+};
+  p{
+    margin-bottom: 20px;
+  }
 `;
 
 export const LastButton = styled.div`
   width: 80%;
   height: 7%;
-  font-family: "Recursive";
+  font-family: "Righteous";
   font-style: normal;
   font-weight: 400;
   font-size: 90%;
@@ -54,7 +57,7 @@ export const LastButton = styled.div`
   }
   
 p{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 `;

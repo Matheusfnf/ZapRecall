@@ -6,6 +6,7 @@ img{
     width: 60px;
     margin-right: 20px;
     
+    
 }
 
 `
@@ -20,6 +21,8 @@ flex-direction:row;
 p{
     font-size: 40px;
     color: white;
+    font-family: 'Righteous';
+    
     
 }
 `;

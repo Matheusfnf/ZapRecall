@@ -3,14 +3,15 @@ import styled from "styled-components"
 export const EstiloContador = styled.div`
 
     height: 15vh;
-    background-color: red;
+    background-color: white;
     display:flex;
     justify-content: center;
     align-items: center;
 
     p{
-        font-size: 30px;
-        color: white;
-        font-family: 'Righteous', cursive;
+        font-size: 24px;
+        color: #333333;
+        font-family: 'Recursive';
+        font-weight: 400;
     }
 `
