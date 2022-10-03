@@ -54,7 +54,7 @@ export default function Pergunta(props, style) {
     return (
       <>
         <LastButton status={status}>
-          {button[page]}
+          <p>{button[page]}</p>
           <div>
             <CaixaLembrou
               status={status}

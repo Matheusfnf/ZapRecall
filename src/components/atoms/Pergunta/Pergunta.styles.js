@@ -12,7 +12,7 @@ export const Button = styled.button`
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  color: ${props => props.color || "black"};
+  color: ${(props) => props.color || "black"};
   background: white;
   border-radius: 5px;
   border: 1px solid blue;
@@ -20,16 +20,15 @@ export const Button = styled.button`
   margin-top: 60px;
   text-decoration: ${(props) => {
     if (props.grifado === "ok") return "line-through";
-  }
-};
-  p{
+  }};
+  p {
     margin-bottom: 20px;
   }
 `;
 
 export const LastButton = styled.div`
-  width: 80%;
-  height: 7%;
+  width: 70%;
+  height: fit-content;
   font-family: "Righteous";
   font-style: normal;
   font-weight: 400;
@@ -46,18 +45,15 @@ export const LastButton = styled.div`
   }};
   background-color: #ffffd4;
   border-radius: 5px;
-  padding: 30px;
   margin-top: 5%;
-  
- 
+  padding: 20px 0;
   variant: {
     correto: {
       color: green !important;
     }
   }
-  
-p{
-  margin-bottom: 5px;
-}
 
+  p {
+    margin-bottom: 5px;
+  }
 `;
