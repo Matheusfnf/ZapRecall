@@ -1,14 +1,33 @@
+/*import React, { useContext } from "react";
+
+import Context from "./Context";
+
+export default function Counter() {
+  const [total, setTotal] = useContext(Context);
+
+  return (
+    <div>
+      <h3>{total}</h3>
+      <button type="button" onClick={() => setTotal(total + 1)}>
+        Contador
+      </button>
+    </div>
+  );
+}
+*/
+
+import React, { useContext } from "react";
+import Contexto from "../../atoms/Contexto/MyContext";
 import { EstiloContador } from "./CaixaContadorstyle";
-import iconecerto from "../../../images/icone_certo.png";
-import iconequase from "../../../images/icone_erro.png";
-import iconeerro from "../../../images/icone_quase.png";
 
 
-export default function Contador(){
-    
+
+export default function Counter(){
+    const {total, setTotal} = useContext(Contexto);
     return(
         <>
-        <EstiloContador><p>0/4 concluídos</p></EstiloContador>
+    <EstiloContador><p>{total}/4 Concluídos</p></EstiloContador>
         </>
     );
 }
+

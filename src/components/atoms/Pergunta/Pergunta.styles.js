@@ -5,26 +5,23 @@ export const Button = styled.button`
   height: 50px;
   font-family: "Recursive";
   font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
+  font-weight: 700;
+  font-size: 20px;
   line-height: 14px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  color: black;
+  color: ${props => props.color || "black"};
   background: white;
   border-radius: 5px;
   border: 1px solid blue;
   padding: 30px;
   margin-top: 60px;
-
-  p {
-    color: black;
-    font-weight: bold;
-    font-size: 15px;
-    
-  }
+  text-decoration: ${(props) => {
+    if (props.grifado === "ok") return "line-through";
+  }};
+  
 `;
 
 export const LastButton = styled.div`
@@ -48,12 +45,16 @@ export const LastButton = styled.div`
   border-radius: 5px;
   padding: 30px;
   margin-top: 5%;
-
+  
+ 
   variant: {
     correto: {
       color: green !important;
     }
   }
   
+p{
+  margin-bottom: 10px;
+}
 
 `;
